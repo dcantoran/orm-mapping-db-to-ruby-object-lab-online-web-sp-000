@@ -23,7 +23,7 @@ class Student
     # find the student in the database given a name
     # return a new instance of the Student class
     sql = <<-SQL
-      SELECT name FROM students WHERE name = ?;
+      SELECT name FROM students WHERE name = ? LIMIT 1;
     SQL
   end
   
