@@ -25,6 +25,8 @@ class Student
     sql = <<-SQL
       SELECT name FROM students WHERE name = ? LIMIT 1;
     SQL
+    
+    DB[:conn].execute(sql).map {|row| }
   end
   
   def save
